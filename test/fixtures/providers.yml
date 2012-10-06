@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  cuit: MyString
+  delivers_monday: false
+  delivers_tuesday: false
+  delivers_wednesday: false
+  delivers_thursday: false
+  delivers_friday: false
+  delivers_saturday: false
+  delivers_sunday: false
+  delivers_holiday: false
+
+two:
+  name: MyString
+  cuit: MyString
+  delivers_monday: false
+  delivers_tuesday: false
+  delivers_wednesday: false
+  delivers_thursday: false
+  delivers_friday: false
+  delivers_saturday: false
+  delivers_sunday: false
+  delivers_holiday: false

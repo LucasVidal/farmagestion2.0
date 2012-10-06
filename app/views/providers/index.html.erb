@@ -1,0 +1,41 @@
+<h1>Listing providers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Cuit</th>
+    <th>Delivers monday</th>
+    <th>Delivers tuesday</th>
+    <th>Delivers wednesday</th>
+    <th>Delivers thursday</th>
+    <th>Delivers friday</th>
+    <th>Delivers saturday</th>
+    <th>Delivers sunday</th>
+    <th>Delivers holiday</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @providers.each do |provider| %>
+  <tr>
+    <td><%= provider.name %></td>
+    <td><%= provider.cuit %></td>
+    <td><%= provider.delivers_monday %></td>
+    <td><%= provider.delivers_tuesday %></td>
+    <td><%= provider.delivers_wednesday %></td>
+    <td><%= provider.delivers_thursday %></td>
+    <td><%= provider.delivers_friday %></td>
+    <td><%= provider.delivers_saturday %></td>
+    <td><%= provider.delivers_sunday %></td>
+    <td><%= provider.delivers_holiday %></td>
+    <td><%= link_to 'Show', provider %></td>
+    <td><%= link_to 'Edit', edit_provider_path(provider) %></td>
+    <td><%= link_to 'Destroy', provider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Provider', new_provider_path %>

@@ -1,0 +1,57 @@
+<%= form_for(@provider) do |f| %>
+  <% if @provider.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@provider.errors.count, "error") %> prohibited this provider from being saved:</h2>
+
+      <ul>
+      <% @provider.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :cuit %><br />
+    <%= f.text_field :cuit %>
+  </div>
+  <div class="field">
+    <%= f.label :delivers_monday %><br />
+    <%= f.check_box :delivers_monday %>
+  </div>
+  <div class="field">
+    <%= f.label :delivers_tuesday %><br />
+    <%= f.check_box :delivers_tuesday %>
+  </div>
+  <div class="field">
+    <%= f.label :delivers_wednesday %><br />
+    <%= f.check_box :delivers_wednesday %>
+  </div>
+  <div class="field">
+    <%= f.label :delivers_thursday %><br />
+    <%= f.check_box :delivers_thursday %>
+  </div>
+  <div class="field">
+    <%= f.label :delivers_friday %><br />
+    <%= f.check_box :delivers_friday %>
+  </div>
+  <div class="field">
+    <%= f.label :delivers_saturday %><br />
+    <%= f.check_box :delivers_saturday %>
+  </div>
+  <div class="field">
+    <%= f.label :delivers_sunday %><br />
+    <%= f.check_box :delivers_sunday %>
+  </div>
+  <div class="field">
+    <%= f.label :delivers_holiday %><br />
+    <%= f.check_box :delivers_holiday %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
